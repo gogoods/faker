@@ -28,13 +28,21 @@ func main2() {
 
 const (
 	Usage = `
+	_____        __                 
+	_/ ____\____  |  | __ ___________ 
+	\   __\\__  \ |  |/ // __ \_  __ \
+	 |  |   / __ \|    <\  ___/|  | \/
+	 |__|  (____  /__|_ \\___  >__|   
+				\/     \/    \/      
+				
 Faker commands:
 
 	enc <content>      Encode a string.
 	dec <content>      Decode a string.
 
 	conceal <content>      Encode a string and add a faker prefix.
-	receal  <content>      Decode a string if it contains a faker prefix.`
+	receal  <content>      Decode a string if it contains a faker prefix.
+`
 )
 
 func main() {
