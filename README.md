@@ -28,6 +28,27 @@ $ go install github.com/gogoods/faker
 
 ```
 $ faker -h
+
+
+        ▄████  ██   █  █▀ ▄███▄   █▄▄▄▄
+        █▀   ▀ █ █  █▄█   █▀   ▀  █  ▄▀
+        █▀▀    █▄▄█ █▀▄   ██▄▄    █▀▀▌
+        █      █  █ █  █  █▄   ▄▀ █  █
+         █        █   █   ▀███▀     █
+          ▀      █   ▀             ▀
+                ▀
+
+Faker commands:
+
+        enc <content>      Encode a string.
+        dec <content>      Decode a string.
+
+        conceal <content>      Encode a string and add a faker prefix.
+        receal  <content>      Decode a string if it contains a faker prefix.        
+```
+
+
+```
 $ faker conceal xxxxx
 $ faker reveal xxxxx
 ```
