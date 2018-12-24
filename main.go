@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"os"
 )
 
@@ -41,7 +40,7 @@ Faker commands:
 func main() {
 
 	if len(os.Args) < 3 {
-		log.Fatal(Usage)
+		fmt.Println(Usage)
 	} else {
 		method := os.Args[1]
 		content := os.Args[2]
@@ -56,7 +55,7 @@ func main() {
 		case "conceal":
 			fmt.Println(Conceal(content))
 		default:
-			log.Fatal(Usage)
+			fmt.Println(Usage)
 		}
 
 	}
