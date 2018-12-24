@@ -27,10 +27,21 @@ func main2() {
 
 }
 
+const (
+	Usage = `
+Faker commands:
+
+	enc <content>      Encode a string.
+	dec <content>      Decode a string.
+
+	conceal <content>      Encode a string and add a faker prefix.
+	receal  <content>      Decode a string if it's contains a faker prefix.`
+)
+
 func main() {
 
 	if len(os.Args) < 3 {
-		log.Fatal("invalid args")
+		log.Fatal("invalid args!\n\n", Usage)
 	} else {
 		method := os.Args[1]
 		content := os.Args[2]
@@ -45,7 +56,7 @@ func main() {
 		case "conceal":
 			fmt.Println(Conceal(content))
 		default:
-			log.Fatal("unknown method")
+			log.Fatal(Usage)
 		}
 
 	}

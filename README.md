@@ -23,7 +23,7 @@ func main(){
 2. Command line:
 
 ```
-$ go install -u github.com/gogoods/faker
+$ go install github.com/gogoods/faker
 ```
 
 ```
