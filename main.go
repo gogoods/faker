@@ -35,13 +35,13 @@ Faker commands:
 	dec <content>      Decode a string.
 
 	conceal <content>      Encode a string and add a faker prefix.
-	receal  <content>      Decode a string if it's contains a faker prefix.`
+	receal  <content>      Decode a string if it contains a faker prefix.`
 )
 
 func main() {
 
 	if len(os.Args) < 3 {
-		log.Fatal("invalid args!\n\n", Usage)
+		log.Fatal(Usage)
 	} else {
 		method := os.Args[1]
 		content := os.Args[2]
