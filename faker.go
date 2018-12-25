@@ -12,9 +12,13 @@ const (
 	FakePrefix = "~"
 )
 
-func Reveal(c string) string {
-	if strings.HasPrefix(c, FakePrefix) {
-		dec := Dec(strings.Replace(c, FakePrefix, "", 1))
+func Reveal(c string, prefix ...string) string {
+	p := FakePrefix
+	if len(prefix) > 0 {
+		p = prefix[0]
+	}
+	if strings.HasPrefix(c, p) {
+		dec := Dec(strings.Replace(c, p, "", 1))
 		if dec != "" {
 			return dec
 		}
@@ -23,8 +27,12 @@ func Reveal(c string) string {
 	return c
 }
 
-func Conceal(c string) string {
-	return FakePrefix + Enc(c)
+func Conceal(c string, prefix ...string) string {
+	p := FakePrefix
+	if len(prefix) > 0 {
+		p = prefix[0]
+	}
+	return p + Enc(c)
 }
 
 func Dec(v string) string {

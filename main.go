@@ -42,8 +42,8 @@ Faker commands:
 	enc <content>      Encode a string.
 	dec <content>      Decode a string.
 
-	conceal <content>      Encode a string and add a faker prefix.
-	receal  <content>      Decode a string if it contains a faker prefix.
+	conceal <content> [prefix]     Encode a string and add a faker prefix.
+	reveal  <content> [prefix]     Decode a string if it contains a faker prefix.
 `
 )
 
@@ -55,15 +55,30 @@ func main() {
 		method := os.Args[1]
 		content := os.Args[2]
 
+		var prefix string
+		if len(os.Args) > 3 {
+			prefix = os.Args[3]
+		}
+
 		switch method {
 		case "enc":
 			fmt.Println(Enc(content))
 		case "dec":
 			fmt.Println(Dec(content))
 		case "reveal":
-			fmt.Println(Reveal(content))
+			if prefix == "" {
+				fmt.Println(Reveal(content))
+			} else {
+				fmt.Println(Reveal(content, prefix))
+			}
+
 		case "conceal":
-			fmt.Println(Conceal(content))
+			if prefix == "" {
+				fmt.Println(Conceal(content))
+			} else {
+				fmt.Println(Conceal(content, prefix))
+			}
+
 		default:
 			fmt.Println(Usage)
 		}
