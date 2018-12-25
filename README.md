@@ -51,4 +51,7 @@ Faker commands:
 ```
 $ faker conceal xxxxx
 $ faker reveal xxxxx
+
+$ faker conceal xxxxx  @
+$ faker reveal xxxxx  @
 ```
