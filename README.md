@@ -43,8 +43,8 @@ Faker commands:
         enc <content>      Encode a string.
         dec <content>      Decode a string.
 
-        conceal <content> <prefix>     Encode a string and add a faker prefix.
-        reveal  <content> <prefix>     Decode a string if it contains a faker prefix.        
+        conceal <content> [prefix]     Encode a string and add a faker prefix.
+        reveal  <content> [prefix]     Decode a string if it contains a faker prefix.        
 ```
 
 
