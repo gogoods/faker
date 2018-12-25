@@ -2,25 +2,11 @@ A simple tool to conceal your confidential string in a public environment then r
 
 ### Usage
 
-1. In your golang source fie:
-
 ```
 $ go get -u github.com/gogoods/faker
 ```
 
-```
-package main
-
-import "github.com/gogoods/faker"
-
-func main(){
-
-    fakepass := "xxxxxx"
-    realpass := faker.Reveal(fakepass)
-}
-```
-
-2. Command line:
+1. Command line:
 
 ```
 $ go install github.com/gogoods/faker
@@ -58,4 +44,18 @@ $ faker conceal xxxxx  ^
 ^1pFwwweIL5EXa3GiWvsyZg==
 $ faker reveal xxxxx  @
 xxxxx
+```
+
+2. In your golang source fie:
+
+```
+package main
+
+import "github.com/gogoods/faker"
+
+func main(){
+
+    fakepass := "~1pFwwweIL5EXa3GiWvsyZg=="
+    realpass := faker.Reveal(fakepass)   //xxxxx
+}
 ```
