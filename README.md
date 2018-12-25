@@ -44,7 +44,7 @@ Faker commands:
         dec <content>      Decode a string.
 
         conceal <content>      Encode a string and add a faker prefix.
-        receal  <content>      Decode a string if it contains a faker prefix.        
+        reveal  <content>      Decode a string if it contains a faker prefix.        
 ```
 
 
