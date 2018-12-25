@@ -50,8 +50,12 @@ Faker commands:
 
 ```
 $ faker conceal xxxxx
-$ faker reveal xxxxx
+~1pFwwweIL5EXa3GiWvsyZg==
+$ faker reveal ~1pFwwweIL5EXa3GiWvsyZg==
+xxxxx
 
-$ faker conceal xxxxx  @
+$ faker conceal xxxxx  ^
+^1pFwwweIL5EXa3GiWvsyZg==
 $ faker reveal xxxxx  @
+xxxxx
 ```
